@@ -1,0 +1,43 @@
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 400px;
+  margin-bottom: 49px;
+}
+
+.user-info__main-avatar {
+  clip-path: url(#clip-avatar);
+}
+
+.user-info__avatar-wrapper {
+  position: relative;
+  margin-bottom: 37px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: -7px;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background-color: #f73267;
+    background-image: url("../img/icon-flame.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.user-info__name {
+  margin-bottom: 8px;
+  font-size: 50px;
+  font-weight: 300;
+  color: #67cbff;
+}
+
+.user-info__profession {
+  font-size: 28px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3);
+}

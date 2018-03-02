@@ -7,46 +7,72 @@
 		<link href="css/style.min.css" rel="stylesheet">
 	</head>
 	<body>
+
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <section class="sidebar">
       <h2 class="visually-hidden">Side menu</h2>
       <div class="sidebar__top">
-        <form method="get">
-          <input type="text" placeholder="Search">
+        <form action="#" method="get">
+          <input class="sidebar__search-field" type="text" name="search" placeholder="Search">
         </form>
-        <a href="#" title="Settings">
-          <svg>
-
+        <a class="sidebar__settings-link" href="#" title="Settings">
+          <svg class="sidebar__settings-button" width="47" height="47">
+            <use xlink:href="#icon-settings"></use>
           </svg>
         </a>
       </div>
 
       <section class="user-info">
         <h2 class="visually-hidden">User information</h2>
-        <img>
-        <span>Twanda Keaton</span>
-        <span>Product Designer</span>
+        <div class="user-info__avatar-wrapper">
+          <img class="user-info__main-avatar" src="../img/main-avatar.png" width="257" height="257" alt="Аватар пользователя">
+          <svg width="0" height="0">
+            <defs>
+              <clipPath id="clip-avatar">
+                <path d="M607.3,676.3s-46.136,8.7-119.807,8.7-119.807-8.7-119.807-8.7-8.7-44.676-8.7-120.772c0-74.881,8.7-118.842,8.7-118.842s44.2-8.7,119.807-8.7,119.807,8.7,119.807,8.7,8.7,21.392,8.7,118.842C616,654.557,607.3,676.3,607.3,676.3Z" transform="translate(-359 -428)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <span class="user-info__name">Twanda Keaton</span>
+        <span class="user-info__profession">Product Designer</span>
       </section>
 
-      <ul class="sidebar__nav main-nav">
+      <ul class="main-nav">
         <li class="main-nav__item">
-          <span>Worldwide</span>
-          <span></span>
+          <svg width="38" height="38">
+            <use xlink:href="#icon-world"></use>
+          </svg>
+          <a class="main-nav__title" href="#">Worldwide</a>
         </li>
         <li class="main-nav__item">
-          <span>Trending</span>
-          <span>22</span>
+          <svg width="34" height="42">
+            <use xlink:href="#icon-trend"></use>
+          </svg>
+          <a class="main-nav__title main-nav__title--trend" href="#">Trending</a>
+          <a class="main-nav__number main-nav__number--trend" href="#">22</a>
         </li>
         <li class="main-nav__item">
-          <span>Places</span>
-          <span></span>
+          <svg width="34" height="41">
+            <use xlink:href="#icon-location"></use>
+          </svg>
+          <a class="main-nav__title main-nav__title--places" href="#">Places</a>
         </li>
-        <li class="main-nav__item">
-          <span>People</span>
-          <span>5</span>
+        <li class="main-nav__item main-nav__item--people">
+          <svg width="27" height="44">
+            <use xlink:href="#icon-profile"></use>
+          </svg>
+          <a class="main-nav__title main-nav__title--people" href="#">People</a>
+          <a class="main-nav__number main-nav__number--people" href="#">5</a>
         </li>
-        <li class="main-nav__item">
-          <span>Notifications</span>
-          <span></span>
+        <li class="main-nav__item main-nav__item--bell">
+          <svg width="40" height="43">
+            <use xlink:href="#icon-bell"></use>
+          </svg>
+          <a class="main-nav__title main-nav__title--bell" href="#">Notifications</a>
         </li>
       </ul>
 

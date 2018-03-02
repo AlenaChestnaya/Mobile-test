@@ -83,21 +83,26 @@
 
       <header class="header">
         <div class="header__top">
-          <button></button>
-          <h3>My Discoveries</h3>
-          <a>
-            <svg></svg>
+          <button class="header__menu-box" type="button" title="Menu toggler">
+            <span class="header__menu-toggler"></span>
+          </button>
+          <h3 class="header__title">My Discoveries</h3>
+          <a class="header__link" href="#" title="World discoveries">
+            <svg width="43" height="43">
+              <use xlink:href="#icon-nav-world"></use>
+            </svg>
+            <span class="header__notifications">8</span>
           </a>
         </div>
-        <ul class="header__nav">
-          <li>
-            <a href="#">Latests</a>
+        <ul class="header__nav header-nav">
+          <li class="header-nav__item">
+            <a class="header-nav__link header-nav__link--active" href="#">Latests</a>
           </li>
-          <li>
-            <a href="#">Favorites</a>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#">Favorites</a>
           </li>
-          <li>
-            <a href="#">All</a>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#">All</a>
           </li>
         </ul>
       </header>
